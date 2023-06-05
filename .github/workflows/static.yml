@@ -35,6 +35,11 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+      - name: Generate Environment Variables File for Production
+        run: |
+          echo "VITE_SOME_KEY=$VITE_SOME_KEY" >> .env
+        env:
+          VITE_SOME_KEY: ${{ secrets.VITE_SOME_KEY }}
       - name: Install dependencies
         run: npm install
       - name: Build
