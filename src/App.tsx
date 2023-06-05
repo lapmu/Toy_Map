@@ -16,7 +16,8 @@ function App() {
       level: 3, //지도의 레벨(확대, 축소 정도)
     };
 
-    const map = new window.kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    new window.kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
   }, []);
 
   return (
